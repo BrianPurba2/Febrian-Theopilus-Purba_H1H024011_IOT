@@ -3,7 +3,7 @@ Percobaan 1A
 #include <DHT.h>
 
 #define DHTPIN 4        // pin data DHT22 terhubung ke GPIO 4
-#define DHTTYPE DHT11   // tipe sensor yang digunakan
+#define DHTTYPE DHT22   // tipe sensor yang digunakan
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -34,7 +34,7 @@ Percobaan 1B
 #include <DHT.h>
 
 #define DHTPIN 4          // DATA DHT22 → GPIO 2
-#define DHTTYPE DHT11
+#define DHTTYPE DHT22
 #define RELAYPIN 5        // Relay → GPIO 5
 
 DHT dht(DHTPIN, DHTTYPE);
