@@ -21,6 +21,57 @@ Kombinasi ini dapat diaplikasikan pada sistem pengondisian udara otomatis (Autom
 -Sistem Smart Farming (Pertanian Cerdas):
 Kombinasi ini dapat digunakan pada sistem otomatisasi Greenhouse atau penyiraman tanaman. Sensor kelembaban tanah dan suhu udara memantau kondisi media tanam secara berkala. Jika kelembaban terdeteksi drop di bawah batas minimum (tanah kering) atau suhu udara terlalu ekstrem, sistem akan langsung mengaktifkan modul relay untuk menghidupkan pompa air/nozzle misting untuk menyiram tanaman hingga parameter lingkungan kembali optimal bagi pertumbuhan tanaman.
 ```
+Penjelasan Kode
+```
+1. Percobaan 1A: Pembacaan Sensor DHT
+Kode ini bertujuan untuk membaca data suhu dan kelembaban secara berkala, lalu menampilkan hasilnya ke Serial Monitor.
+
+Inisialisasi & Konfigurasi
+#include <DHT.h>: Memanggil pustaka (library) utama untuk mengontrol sensor DHT.
+
+#define DHTPIN 4: Menentukan pin GPIO 4 pada mikrokontroler (seperti ESP32/ESP8266) sebagai pin komunikasi data.
+
+#define DHTTYPE DHT11: Menentukan jenis sensor yang dipakai.
+
+Catatan Kesalahan di Komentar Kode:
+Penulisan kode menggunakan DHTTYPE DHT11, tetapi komentar di baris kode menyebutkan DHT22. Pustaka akan memproses data menggunakan algoritma DHT11.
+
+Fungsi setup()
+Serial.begin(115200);: Membuka jalur komunikasi serial dengan kecepatan baud rate 115200 bps untuk mengirim teks ke monitor komputer.
+
+dht.begin();: Mengaktifkan sensor DHT agar siap membaca data.
+
+Fungsi loop()
+dht.readHumidity() & dht.readTemperature(): Mengambil nilai kelembaban (persen) dan suhu (Celsius) lalu menyimpannya ke variabel berjenis float.
+
+isnan(...): Fungsi Is Not a Number untuk mengecek apakah pembacaan sensor gagal/terputus. Jika gagal, pesan peringatan akan dikirim ke Serial Monitor.
+
+Serial.print(...): Jika berhasil, nilai suhu dan kelembaban ditampilkan ke Serial Monitor.
+
+2. Percobaan 1B: Kontrol Otomatis Aktuator (Relay) berdasarkan Suhu
+Kode ini merupakan pengembangan dari Percobaan 1A. Selain membaca suhu, sistem ini menambahkan logika kontrol untuk menyalakan atau mematikan Relay berdasarkan suhu lingkungan.
+
+Tambahan Inisialisasi
+#define RELAYPIN 5: Menentukan pin GPIO 5 terhubung ke modul Relay.
+
+const float suhuThreshold = 30.0;: Menentukan batas suhu pemicu sebesar 30,0 °C.
+
+Fungsi setup()
+pinMode(DHTPIN, INPUT_PULLUP);: Mengaktifkan resistor pull-up internal mikrokontroler pada pin data sensor.
+
+pinMode(RELAYPIN, OUTPUT);: Mengatur pin relay sebagai output.
+
+digitalWrite(RELAYPIN, LOW);: Memastikan relay berada dalam kondisi mati (OFF) saat sistem pertama kali menyala.
+
+Fungsi loop()
+delay(2000);: Memberikan jeda 2 detik sebelum membaca sensor, karena keluarga sensor DHT membutuhkan jeda minimal 1–2 detik agar hasilnya stabil.
+
+Logika Kontrol Keputusan:
+
+Jika Suhu > 30,0 °C: digitalWrite(RELAYPIN, HIGH); → Relay aktif (ON). Aktuator (seperti kipas angin atau pendingin) menyala.
+
+Jika Suhu ≤ 30,0 °C: digitalWrite(RELAYPIN, LOW); → Relay nonaktif (OFF).
+```
 Dokumentasi Praktikum
 <img width="1280" height="576" alt="IMG-20260901-WA0017" src="https://github.com/user-attachments/assets/0e41f7a5-afee-47e2-8151-0aea1a4f8e9c" />
 Gambar yang menampilkan Serial Monitor
