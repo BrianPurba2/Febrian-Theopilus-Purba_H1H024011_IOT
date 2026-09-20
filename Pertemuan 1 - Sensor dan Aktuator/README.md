@@ -20,3 +20,13 @@ Proses perubahan dari data mentah menjadi aksi fisik (akuisisi hingga aktuasi) m
 Kombinasi ini dapat diaplikasikan pada sistem pengondisian udara otomatis (Automated HVAC). Ketika sensor suhu mendeteksi ruangan melebihi batas kenyamanan (misalnya \[>27^{\circ }\text{C}\]), mikrokontroler akan memicu relay untuk menyalakan pendingin ruangan (AC) atau kipas angin. Begitu suhu ruangan kembali sejuk di bawah batas bawah, AC akan dimatikan secara otomatis untuk menghemat konsumsi energi listrik.
 -Sistem Smart Farming (Pertanian Cerdas):
 Kombinasi ini dapat digunakan pada sistem otomatisasi Greenhouse atau penyiraman tanaman. Sensor kelembaban tanah dan suhu udara memantau kondisi media tanam secara berkala. Jika kelembaban terdeteksi drop di bawah batas minimum (tanah kering) atau suhu udara terlalu ekstrem, sistem akan langsung mengaktifkan modul relay untuk menghidupkan pompa air/nozzle misting untuk menyiram tanaman hingga parameter lingkungan kembali optimal bagi pertumbuhan tanaman.
+```
+Dokumentasi Praktikum
+<img width="1280" height="576" alt="IMG-20260901-WA0017" src="https://github.com/user-attachments/assets/0e41f7a5-afee-47e2-8151-0aea1a4f8e9c" />
+Gambar yang menampilkan Serial Monitor
+<img width="1280" height="576" alt="IMG-20260901-WA0022" src="https://github.com/user-attachments/assets/5cecb722-71fb-4622-a868-11bc4a161f6a" />
+Peralatan yang digunakan seperti aktuator dan sensor
+<img width="1280" height="576" alt="IMG-20260901-WA0020" src="https://github.com/user-attachments/assets/f97a136d-1a39-4d5b-817a-46d5e1b9815a" />
+Gambar Aktuator
+
+
