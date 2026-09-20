@@ -23,7 +23,7 @@ Kombinasi ini dapat digunakan pada sistem otomatisasi Greenhouse atau penyiraman
 ```
 Penjelasan Kode
 ```
-1. Percobaan 1A: Pembacaan Sensor DHT
+1. Percobaan 1A: Akuisisi Data Sensor DHT22 (Suhu dan Kelembaban)
 Kode ini bertujuan untuk membaca data suhu dan kelembaban secara berkala, lalu menampilkan hasilnya ke Serial Monitor.
 
 Inisialisasi & Konfigurasi
@@ -48,7 +48,7 @@ isnan(...): Fungsi Is Not a Number untuk mengecek apakah pembacaan sensor gagal/
 
 Serial.print(...): Jika berhasil, nilai suhu dan kelembaban ditampilkan ke Serial Monitor.
 
-2. Percobaan 1B: Kontrol Otomatis Aktuator (Relay) berdasarkan Suhu
+2. Percobaan 1B: Kendali Aktuator Relay Berdasarkan Data Sensor
 Kode ini merupakan pengembangan dari Percobaan 1A. Selain membaca suhu, sistem ini menambahkan logika kontrol untuk menyalakan atau mematikan Relay berdasarkan suhu lingkungan.
 
 Tambahan Inisialisasi
@@ -79,5 +79,12 @@ Gambar yang menampilkan Serial Monitor
 Peralatan yang digunakan seperti aktuator dan sensor
 <img width="1280" height="576" alt="IMG-20260901-WA0020" src="https://github.com/user-attachments/assets/f97a136d-1a39-4d5b-817a-46d5e1b9815a" />
 Gambar Aktuator
+
+Rangkaian Skematik
+Percobaan 1A
+<img width="503" height="456" alt="image" src="https://github.com/user-attachments/assets/669fe3ff-5b45-4d56-a941-7914f7d03f50" />
+
+Percobaan 1B
+<img width="626" height="429" alt="image" src="https://github.com/user-attachments/assets/7971d851-4ad9-4068-a763-454236a85604" />
 
 
