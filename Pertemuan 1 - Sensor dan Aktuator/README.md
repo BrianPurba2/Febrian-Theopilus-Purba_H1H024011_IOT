@@ -80,7 +80,7 @@ Peralatan yang digunakan seperti aktuator dan sensor
 <img width="1280" height="576" alt="IMG-20260901-WA0020" src="https://github.com/user-attachments/assets/f97a136d-1a39-4d5b-817a-46d5e1b9815a" />
 Gambar Aktuator
 
-Rangkaian Skematik
+Rangkaian Skematik<p>
 Percobaan 1A<p>
 <img width="503" height="456" alt="image" src="https://github.com/user-attachments/assets/669fe3ff-5b45-4d56-a941-7914f7d03f50" />
 
