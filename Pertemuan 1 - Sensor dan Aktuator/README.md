@@ -81,10 +81,10 @@ Peralatan yang digunakan seperti aktuator dan sensor
 Gambar Aktuator
 
 Rangkaian Skematik
-Percobaan 1A
+Percobaan 1A<p>
 <img width="503" height="456" alt="image" src="https://github.com/user-attachments/assets/669fe3ff-5b45-4d56-a941-7914f7d03f50" />
 
-Percobaan 1B
+Percobaan 1B<p>
 <img width="626" height="429" alt="image" src="https://github.com/user-attachments/assets/7971d851-4ad9-4068-a763-454236a85604" />
 
 
