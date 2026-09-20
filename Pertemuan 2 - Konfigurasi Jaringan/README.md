@@ -41,11 +41,11 @@ Pengisytiharan Pemboleh Ubah:
 -Jika masih terhubung (WL_CONNECTED), mesej "Status: Terhubung" dipaparkan.
 -Jika terputus, mesej "Status: Terputus" dipaparkan dan LED dimatikan.
 ```
-Dokumentasi Praktikum
+Dokumentasi Praktikum<p>
 <img width="640" height="480" alt="IMG-20260915-WA0002" src="https://github.com/user-attachments/assets/9e7b7795-8c51-474a-96dd-d4f630ca6494" />
-Gambar Output Program
+Gambar Output Program<p>
 <img width="640" height="480" alt="IMG-20260915-WA0003" src="https://github.com/user-attachments/assets/0ae585ce-3fa4-409f-b375-c63a23ebb886" />
-Dokumentasi hasil rangkaian
+Dokumentasi hasil rangkaian<p>
 
 Rangkaian Skematik
 Percobaan 2A
