@@ -14,3 +14,43 @@ ESP32 membedakan kedua fungsi ini pada lapisan stack jaringan (TCP/IP Adapter/Wi
 -Sebagai Station (Klien/STA): Antarmuka WiFi ESP32 bekerja secara pasif mendengarkan beacon frame dari router, lalu melakukan proses jabat tangan (handshake) authentication/association. ESP32 meminta alokasi alamat IP melalui DHCP Server milik router/network eksternal.
 -Sebagai Access Point (AP): Antarmuka WiFi ESP32 bertindak secara aktif memancarkan beacon frame (SSID), menjalankan layanan DHCP Server internal untuk membagikan alamat IP (default: 192.168.4.1) kepada perangkat yang terhubung, serta memproses permintaan autentikasi client.
 ```
+Penjelasan Kode
+```
+1. Percobaan 2A: Konfigurasi Mode Station (STA)
+Kod ini mengonfigurasikan ESP32 sebagai Station (STA), iaitu peranti bertindak sebagai client yang menyambung ke rangkaian WiFi yang sedia ada (contohnya hotspot telefon atau router).
+
+>Komponen Utama Kod:
+Pengisytiharan Pemboleh Ubah:
+-ssid dan password: Menyimpan nama rangkaian WiFi ("poco") dan kata laluan ("9876543210").
+-ledPin = 2: Menggunakan pin GPIO 2 (biasanya LED terbina pada ESP32) sebagai penunjuk status sambungan.
+
+>Fungsi setup():
+-Serial.begin(115200): Memulakan komunikasi serial pada kelajuan 115200 bps untuk paparan Serial Monitor.
+-WiFi.mode(WIFI_STA): Menetapkan mode ESP32 sebagai Station sahaja.
+-WiFi.begin(ssid, password): Memulakan proses penyambungan ke rangkaian WiFi.
+-while (WiFi.status() != WL_CONNECTED): Gelung menyemak status sehingga sambungan berjaya. Titik . dipaparkan setiap 0.5 saat semasa proses penyambungan.
+
+>Maklumat Rangkaian: Selepas berjaya disambungkan, kod akan memaparkan:
+-WiFi.localIP(): Alamat IP yang diberikan oleh router kepada ESP32.
+-WiFi.macAddress(): Alamat perkakasan fizikal (MAC) unik bagi modul WiFi ESP32.
+-WiFi.RSSI(): Kekuatan isyarat WiFi dalam unit dBm.
+-digitalWrite(ledPin, HIGH): Menyalakan LED sebagai tanda status telah menyambung.
+
+>Fungsi loop():
+-Setiap 5 saat (delay(5000)), ESP32 menyemak status sambungan WiFi melalui WiFi.status().
+-Jika masih terhubung (WL_CONNECTED), mesej "Status: Terhubung" dipaparkan.
+-Jika terputus, mesej "Status: Terputus" dipaparkan dan LED dimatikan.
+```
+Dokumentasi Praktikum
+<img width="640" height="480" alt="IMG-20260915-WA0002" src="https://github.com/user-attachments/assets/9e7b7795-8c51-474a-96dd-d4f630ca6494" />
+Gambar Output Program
+<img width="640" height="480" alt="IMG-20260915-WA0003" src="https://github.com/user-attachments/assets/0ae585ce-3fa4-409f-b375-c63a23ebb886" />
+Dokumentasi hasil rangkaian
+
+Rangkaian Skematik
+Percobaan 2A
+<img width="394" height="392" alt="image" src="https://github.com/user-attachments/assets/81f714d9-2a28-4992-8002-4c7d1a815601" />
+
+Percobaan 2B
+<img width="238" height="319" alt="image" src="https://github.com/user-attachments/assets/539c7134-8cd5-48d7-893c-5fbf378b147f" />
+
