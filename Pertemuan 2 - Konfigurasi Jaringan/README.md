@@ -47,10 +47,10 @@ Gambar Output Program<p>
 <img width="640" height="480" alt="IMG-20260915-WA0003" src="https://github.com/user-attachments/assets/0ae585ce-3fa4-409f-b375-c63a23ebb886" /><P>
 Dokumentasi hasil rangkaian<p>
 
-Rangkaian Skematik
-Percobaan 2A
-<img width="394" height="392" alt="image" src="https://github.com/user-attachments/assets/81f714d9-2a28-4992-8002-4c7d1a815601" />
+Rangkaian Skematik<p>
+Percobaan 2A<p>
+<img width="394" height="392" alt="image" src="https://github.com/user-attachments/assets/81f714d9-2a28-4992-8002-4c7d1a815601" /><p>
 
-Percobaan 2B
-<img width="238" height="319" alt="image" src="https://github.com/user-attachments/assets/539c7134-8cd5-48d7-893c-5fbf378b147f" />
+Percobaan 2B<p>
+<img width="238" height="319" alt="image" src="https://github.com/user-attachments/assets/539c7134-8cd5-48d7-893c-5fbf378b147f" /><p>
 
