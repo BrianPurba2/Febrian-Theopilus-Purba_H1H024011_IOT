@@ -38,6 +38,29 @@ Dalam praktikum ini, data seperti suhu dan kelembaban dikemas dalam JSON sebelum
 Contoh data:
 ```
 {"suhu":28.5,"kelembaban":65}
+```
 Penggunaan format yang sama pada berbagai sisi komunikasi membantu perangkat pengirim dan penerima memahami struktur data yang dipertukarkan.
+
+Penjelasan Kode yang ditambahkan<p>
+Bagian Kode	Penjelasan
+doc["waktu"] = millis();	Menambahkan pasangan waktu ke objek JSON. Nilainya berasal dari millis() dan menunjukkan jumlah milidetik yang telah berlalu sejak perangkat mulai menjalankan program.
+serializeJson(doc, requestBody);	Mengubah objek JSON yang sekarang sudah memiliki data suhu, kelembaban, dan waktu menjadi bentuk teks untuk dikirim melalui HTTP POST.
+Contoh struktur data setelah modifikasi menjadi:
+```
+{"suhu":28.5,"kelembaban":65.0,"waktu":12345}
+```
+Nilai waktu akan berubah sesuai lama perangkat telah berjalan.
+
+Dokumentasi Praktikum<p>
+<img width="384" height="512" alt="IMG-20260920-WA0029" src="https://github.com/user-attachments/assets/2ffe6bfb-7be3-4040-8f42-c6a4d31892c9" />
+Gambar Rangkaian<p>
+<img width="640" height="480" alt="IMG-20260915-WA0026" src="https://github.com/user-attachments/assets/c001d163-1e6b-47ac-ad8a-cf1b77336747" />
+Tampilan Serial Monitor<p>
+<img width="640" height="480" alt="IMG-20260915-WA0030" src="https://github.com/user-attachments/assets/517ea8c6-307d-46d2-93d7-11a7f8c2d512" />
+Tampilan Serial Monitor<p>
+<img width="640" height="480" alt="IMG-20260915-WA0029" src="https://github.com/user-attachments/assets/1b327e92-9307-40f6-a806-a0674092d305" />
+MQTT<p>
+
+
 
 
