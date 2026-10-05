@@ -8,8 +8,8 @@
 // =====================================================
 // KONFIGURASI WIFI
 // =====================================================
-const char* ssid = "Sumbangan";
-const char* password = "kvaratskhelia";
+const char* ssid = "poco";
+const char* password = "9876543210";
 
 // =====================================================
 // KONFIGURASI MQTT
@@ -296,8 +296,8 @@ Subscribe Secara Bersamaan)**
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "Sumbangan";
-const char* password = "kvaratskhelia";
+const char* ssid = "poco";
+const char* password = "9876543210";
 const char* mqttServer = "broker.hivemq.com";
 const int mqttPort = 1883;
 const char* topicData = "makan";
